@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button{
+        color:royalblue;
+    }
+ </style>
+ <script>
+    let javascript=0;
+    let Python = 0;
+    let Java  = 0;
+    const increment1=()=>{
+        javascript++;
+        showvotes();
+    }
+    const increment2=()=>{
+        Python++;
+        showvotes();
+    }
+    const increment3=()=>{
+        Java++;
+        showvotes();
+    }
+    function showvotes(){
+        const resultdiv = document.getElementById('result');
+        resultdiv.innerHTML=`
+        <p>Javascript:${javascript}</p>
+        <p>Pyhton:${Python}</p>
+        <p>Java:${Java}</p>`;
+    }
+
+ </script>
+ </head>
+ 
+ <body>
+
+        <h1> Vote for Your Favourite Language</h1>
+    <button onclick = "increment1(javascript);showvotes()">Java Script</button>
+    <button onclick = "increment2(Python);showvotes()">Python</button>
+    <button onclick = "increment3(Java);showvotes()">Java </button>
+    <div id="result">
+    </div>
+   
+    
+
+ </body>
+ </html>
